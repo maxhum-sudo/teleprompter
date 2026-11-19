@@ -1,0 +1,122 @@
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --text: #f5f5f5;
+  --muted: #a3a3a3;
+  --line: rgba(255, 255, 255, 0.12);
+  --card: rgba(255, 255, 255, 0.08);
+  --max: 40rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a { color: inherit; }
+
+header, main, footer {
+  width: min(var(--max), calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+header {
+  padding: 1.75rem 0 0.5rem;
+}
+
+.brand {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  color: var(--text);
+}
+
+main { padding-bottom: 3rem; }
+
+h1 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  margin: 2rem 0 0.4rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+p, li { color: #e8e8e8; }
+
+.lede {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  background: #fff;
+  color: #000;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: var(--card);
+  color: #fff;
+}
+
+ol, ul { padding-left: 1.2rem; }
+
+li + li { margin-top: 0.45rem; }
+
+.card {
+  margin-top: 0.8rem;
+  padding: 1rem 1.1rem;
+  background: var(--card);
+  border-radius: 16px;
+}
+
+.card h2 { margin-top: 0; }
+
+.card p:last-child { margin-bottom: 0; }
+
+footer {
+  padding: 0 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer a { color: var(--muted); }
